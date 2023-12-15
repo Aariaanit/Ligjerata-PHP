@@ -1,0 +1,10 @@
+1. Rishikimi i planprogramit ne baza javore ose mujore
+2. Ndryshime ne planprogram ne baza 6 mujore ose vjetore
+3. Vendosa e nje plani per kret aktivitetet brenda shkolles dhe jashte shkolles.
+4. Ndarja e tyre ne primare(obligative) dhe sekondare(jo obligative)
+5. Plani konkret per zhvillimet e ores mesimore, qdo muaj te kete nje ore aktivitet jashte mesimit.
+6. Aktiviteti Ora e kodimit te specifikohet qysh ne fillim te viti shkollor, ne sa shkolla do te mbahet dhe te caktohen datat se kur do te mbahen.
+7. Organizimi i aktiviteteve si tournametet dhe lojrat e ndyshme per gjate tere vitit kalendarit te specifikohen datat dhe pjesmarres te jete i gjithe stafi i shkolles.
+8. Mbajtja e nje gare ne fund te vitit shkollor per zgjedhjen e projekteve me te mira per secilin nivel (Code, Scratch, MITAppInventor, CSD&CSD3, Front-End, Back-End, Wordpress, React&ReactNative, Java, Krijimi i gjerave Inovative), si dhe shperblime per me te miret.
+9. Vazhdimi me praktikanta ne DigiLab mundesia qe ndonjeri prej tyre me vazhdu si i punesuar.
+10. Zgjedhja e problemit te pastrimit sa me shpejt qe eshte e mundur.
