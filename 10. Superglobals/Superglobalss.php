@@ -2,6 +2,18 @@
 	<head>
 	</head>
 	<body>
+
+	<!-- 
+		$GLOBALS
+		$_SERVER
+		$_REQUEST
+		$_POST
+		$_GET
+		$_FILES
+		$_ENV
+		$_COOKIE
+		$_SESSION
+	 -->
 		<p>$GLOBALS</p>
 		<?php
 			$a = 50;

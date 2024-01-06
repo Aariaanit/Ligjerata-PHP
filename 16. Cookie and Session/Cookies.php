@@ -2,7 +2,7 @@
 	$cookie_name = "User";
 	$cookie_value = "Arianit Tershnjaku";
 	//setcookie(name, value, expire, path, domain, secure, httponly);
-	setcookie($cookie_name, $cookie_value, time() + 5, "/"); // 86400 = 1 dite
+	setcookie($cookie_name, $cookie_value, time() + 10, "/"); // 86400 = 1 dite
 	// Ne kete menyre mund te e fshijme nje cookie.
 	//setcookie("user", "", time() - 10);
 

@@ -10,7 +10,9 @@
 				include('form.php');
 				
 				//echo 'forma e pare';
+				include('navbar1.php');
 		?>
+		
 		<p><span class="empty">* Required</span></p>
 		<form method="post" action="">
 			Username: <input type="text" name="Username">

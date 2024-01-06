@@ -34,8 +34,6 @@
                     <input type="submit" name="upload" value="Insert">
                     <input type="reset" name="cancel" value="Cancel">
                 </form>
-                
-                <a href='insert.php'>Home</a>
                 <?php
                     include('../includes/footer.php');
                 ?>
