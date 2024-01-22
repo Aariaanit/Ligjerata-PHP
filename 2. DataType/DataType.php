@@ -4,7 +4,7 @@
 	<body>
 		<h3>String</h3>
 		<?php
-		 // Tipi i te dhenave String.
+		// Tipi i te dhenave String.
 			$x = "Shkolla Digjitale";
 			$y = 'Prizren';
             
@@ -33,7 +33,8 @@
 			
             echo is_int($x); //Nese eshte 'Integer' kthen si rezultat 1. 
             echo "<br>";
-			echo is_int($y); 			
+			echo is_int($y); 
+			var_dump(is_int($y));			
 		
         ?>  
 		<br>

@@ -18,7 +18,7 @@
 		
             echo "<h2>Shkolla Digjitale</h2>";
 		    echo "<br>";
-            echo "Prizren "."Kosovo";
+            echo "Prizren "."Kosova";
 			
     
             print "<h4>Shkolla \"Digjitale\"</h4><br>";

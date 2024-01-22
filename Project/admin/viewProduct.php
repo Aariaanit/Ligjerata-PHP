@@ -7,7 +7,7 @@
             table,td,th{
                 border:2px solid black;
                 border-collapse: collapse;
-            }    
+            }  
         </style>
     </head> 
     <body>
