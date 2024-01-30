@@ -5,7 +5,7 @@
 		<?php
         //Shembulli 1
 			//Te tregohet nese 5 eshte me i vogel se 10 permes kushteve
-			$x = 51;
+			$x = 1;
 			
 			if($x < 10)
 			{
@@ -38,7 +38,7 @@
 
         <br>
 		<?php
-			$a = 50; $b= 50;  $c =60;
+			$a = 50; $b= 70;  $c =60;
 			
 			if($a > $b && $a > $c){
 				echo "A eshte me e madhe";

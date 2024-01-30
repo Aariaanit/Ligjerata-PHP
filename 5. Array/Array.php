@@ -10,7 +10,7 @@
         
 			//Menyra se si mund te ju qasemi elementeve te Array, permes Index.
 			echo $x[0]."<br>".$x[1]."<br>".$x[2];
-           echo $x;
+        	echo $x;
             echo "<br>";
             var_dump($x);
 			echo "<br>";
@@ -31,11 +31,7 @@
 
 			echo $z["username"];
 			echo '<br>';
-			$mosha = array("Arianit"=>26, "Florian"=>27, "Roni"=>26);
-
-
-        
-			echo "Arianiti eshte " . $mosha['Arianit'] . " vjeq.";
+			echo "Username eshte " . $z['username'];
 		?>
 		<h2>Sorting Arrays</h2>
 		<h3>sort()</h3>
@@ -80,7 +76,7 @@
 
 			$y = count($x);
         
-			for($z=$y-1;$z>=0;$z--)
+			for($z=0;$z<$y;$z++)
 			{
 				echo $x[$z];
 				echo "<br>";

@@ -10,9 +10,6 @@
         $connect=mysqli_connect("localhost","root","","login");
         mysqli_select_db($connect,"login");
 
-
-
-
         if(isset($_GET['id'])){
 
             $id = $_GET['id'];

@@ -35,17 +35,7 @@
 			echo $ndrroje;
 		?>
 		<br>
-		<?php
-		
-		
-		?>
-		
-		
-		
-		
-		
-		
-		
+
 		
 	</body>
 </html>

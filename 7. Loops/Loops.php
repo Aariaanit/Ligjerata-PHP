@@ -10,17 +10,11 @@
 			
 			while($x <= 10)
 			{
-				
 				echo $x."<br>";
 				$x++;
-				
 
 				// Pyetje? Si mund te i rrisim nga dy vlera, ose me shume.
-
-
-					//$x+=2;
 			}
-        
 		?>
 		<br>
         <?php
@@ -37,7 +31,6 @@
 				// Pyetje? Si mund te i rrisim nga dy vlera, ose me shume.
 					//$x+=2;
 			}
-
 		?>
         <p>Do while loops</p>
         
@@ -54,19 +47,10 @@
 			}
 			while($y <= 10)
 		?>
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
 		<p>For loops</p>
         
 		<?php
-			
 			for($z=0;$z<=10;$z++)
 			{
 				echo 'Numeri eshte: ' . $z . '<br>';
