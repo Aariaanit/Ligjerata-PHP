@@ -20,6 +20,11 @@
 		echo "Ora eshte " . date("h:i:sa");
 		echo "<br>";
 		echo "Ora eshte " . date("H:i:s");
+
+	?>
+	<br>
+	<?php
+		echo date("Y-m-d H:i:s");
 	?>
 	<br>
 	<?php

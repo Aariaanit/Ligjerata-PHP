@@ -25,7 +25,7 @@
                         
                         if(mysqli_num_rows($query)>0)
                         {
-                            //$_SESSION['username']=$username;
+                            $_SESSION['username']=$username;
                             
                             echo "<script>
                                window.open('admin.php','_self');

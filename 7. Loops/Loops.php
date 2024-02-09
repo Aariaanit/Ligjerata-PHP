@@ -26,7 +26,7 @@
 				$x++;
 				if($x==6)
 				{
-					continue; //e nderpret loop edhe nese nuk ka perfundue ende.
+					break; //e nderpret loop edhe nese nuk ka perfundue ende.
 				}
 				// Pyetje? Si mund te i rrisim nga dy vlera, ose me shume.
 					//$x+=2;
@@ -161,7 +161,7 @@
 		
 				for($x=1;$x<=5;$x++){
 					for($y=1;$y<=5;$y++){
-						if($x == $y || $x + $y == 6 || $y == 3 || $y == 1 || $x == 1 || $x == 5){
+						if($x == $y){
 							echo "X"." ";
 						}
 						else{

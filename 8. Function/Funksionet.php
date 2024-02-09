@@ -68,7 +68,7 @@
 				
 			}
 			echo numeri();
-			//echo $x;
+			echo $x;
 		?>
 		<br>
 		<?php 
