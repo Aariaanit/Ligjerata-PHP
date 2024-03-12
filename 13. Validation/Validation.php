@@ -1,11 +1,15 @@
 <html>
-	<head>
-		<style>
-			.empty {color: red;}
-		</style>
-	</head>
-	<body>
-		<?php
+
+<head>
+    <style>
+    .empty {
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <?php
 			$empUsername = "";	//Duhet te krijohen qe te mund te ju qasemi dpermes formes.
 			$empPassword = "";
 			$empEmail = "";
@@ -18,7 +22,7 @@
 			{
 				$empUsername ="Username is required";
 			}
-			else if (!preg_match("/^[a-zA-ZëË ]*$/",$username)) 
+			else if (!preg_match("/^[a-zA-ZëË0-9]*$/",$username)) 
 			{
 				$empUsername = "Only letters and white space allowed";
 			}
@@ -35,7 +39,7 @@
 				$empEmail ="Email is required";
 				// echo '<script>alert("Required!")</script>';
 			}
-			else if($username !="" and $password != "" and $email != "")
+			else if($username !="" and $password != "" and $email != "" and preg_match("/^[a-zA-ZëË0-9]*$/",$username))
 			{
 				echo '<script>alert("Register Succesfully!")</script>';
 			}
@@ -47,19 +51,20 @@
 			return $x;
 		}
 		?>
-		<p><span class="empty">* Required</span></p>
-		<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-			Username: <input type="text" name="Username">
-			<span class="empty">*<?php echo $empUsername;?></span><br><br>
-			Password: <input type="password" name="Password">
-			<span class="empty">*<?php echo $empPassword;?></span><br><br>
-			Email: <input type="email" name="Email">
-			<span class="empty">*<?php echo $empEmail;?></span><br><br>
-			<input type="submit" value="Sign Up">
-			<input type="reset" value="Cancel">
-		</form>
-		
+    <p><span class="empty">* Required</span></p>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+        Username: <input type="text" name="Username">
+        <span class="empty">*<?php echo $empUsername;?></span><br><br>
+        Password: <input type="password" name="Password">
+        <span class="empty">*<?php echo $empPassword;?></span><br><br>
+        Email: <input type="email" name="Email">
+        <span class="empty">*<?php echo $empEmail;?></span><br><br>
+        <input type="submit" value="Sign Up">
+        <input type="reset" value="Cancel">
+    </form>
 
-		
-	</body>
+
+
+</body>
+
 </html>

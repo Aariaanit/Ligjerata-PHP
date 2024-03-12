@@ -1,10 +1,12 @@
 <html>
-	<head>
-	</head>
-	<body>
-		<p>While loops</p>
-    
-		<?php
+
+<head>
+</head>
+
+<body>
+    <p>While loops</p>
+
+    <?php
         
 			$x = 0;
 			
@@ -16,8 +18,8 @@
 				// Pyetje? Si mund te i rrisim nga dy vlera, ose me shume.
 			}
 		?>
-		<br>
-        <?php
+    <br>
+    <?php
 			$x = 0;
 			
 			while($x <= 10)
@@ -32,11 +34,11 @@
 					//$x+=2;
 			}
 		?>
-        <p>Do while loops</p>
+    <p>Do while loops</p>
+
+    <?php
         
-		<?php
-        
-			$y = 11;
+			$y = 0;
 			do{
 				echo $y . '<br>';
 				$y++;
@@ -48,23 +50,23 @@
 			while($y <= 10)
 		?>
 
-		<p>For loops</p>
-        
-		<?php
+    <p>For loops</p>
+
+    <?php
 			for($z=0;$z<=10;$z++)
 			{
 				echo 'Numeri eshte: ' . $z . '<br>';
 				if($z==6)
 				{
-					break; //e nderpret loop edhe nese nuk ka perfundue ende.
+					continue; //e nderpret loop edhe nese nuk ka perfundue ende.
 				}
 			}
 		?>
-        
-        
-		<p>Foreach Loops</p>
-		
-        <?php
+
+
+    <p>Foreach Loops</p>
+
+    <?php
 		//foreach vlen vetem per array.
 			$txt = array(1,28,3,4,5,6,7,90);
 			sort($txt);
@@ -73,9 +75,9 @@
 				echo " $x <br>";
 			}
 		?>
-    
-		<br>
-		<?php
+
+    <br>
+    <?php
             $text = array(2,3,5,22,11,6,3,5);
            	sort($text);
 		
@@ -85,36 +87,30 @@
 				    echo $text[$x].'<br>';  
                 }
 		?>
-        
-        <br>
-		<br>
-        <?php 
-				
-		
-				for($x=1;$x<=5;$x++){
-					for($y=1;$y<=5;$y++){
-						echo $y." ";
-						
-					}
-					
-					echo "<br> ";
-				}
+
+    <br>
+    <br>
+    <?php 	
+		for($x=1;$x<=5;$x++){
+			for($y=1;$y<=5;$y++){
+				echo $y." ";		
+			}	
+			echo "<br> ";
+		}
 		?>
-		<br><br>
-		<?php 
-				
+    <br><br>
+    <?php 
 		
 				for($x=1;$x<=5;$x++){
 					for($y=1;$y<=5;$y++){
 						echo $x." ";
 						
 					}
-					
 					echo "<br> ";
 				}
 		?>
-		<br><br>
-		<?php 
+    <br><br>
+    <?php 
 			// for ($i = 1; $i <= 5; $i++) {
 			// 	for ($j = $i; $j < $i + 5; $j++) {
 			// 		echo $j . " ";
@@ -122,8 +118,8 @@
 			// 	echo "<br>";
 			// }
 		?>
-		<br>
-         <?php 
+    <br>
+    <?php 
 				$z = 1;
 		
 				for($x=1;$x<=5;$x++){
@@ -135,8 +131,18 @@
 					echo "<br> ";
 				}
 		?>
-		<br><br>
-         <?php 
+    <br><br>
+    <?php 
+		
+		for($x=1;$x<=5;$x++){
+			for($y=1;$y<=5;$y++){
+				echo "X"." ";
+			}
+			echo "<br> ";
+		}
+?>
+    <br><br>
+    <?php 
 				$z = 1;
 		
 				for($x=1;$x<=5;$x++){
@@ -146,8 +152,8 @@
 					echo "<br> ";
 				}
 		?>
-		<br><br>
-        <?php 
+    <br><br>
+    <?php 
 				for($x=1;$x<=5;$x++){
 					for($y=5;$y>=$x;$y--){
 						echo "*"." ";
@@ -155,8 +161,8 @@
 					echo "<br> ";
 				}
 		?>
-		<br><br>
-        <?php 
+    <br><br>
+    <?php 
 				
 		
 				for($x=1;$x<=5;$x++){
@@ -171,8 +177,8 @@
 					echo "<br> ";
 				}
 		?>
-<br><br>
-		<?php 
+    <br><br>
+    <?php 
 			for($x=1;$x<=5;$x++){
 				for($y=1;$y<=5;$y++){
 					if($x+$y==6){
@@ -185,10 +191,23 @@
 				echo "<br> ";
 			}
 		?>
+    <br><br>
+    <?php 
+			for($x=1;$x<=5;$x++){
+				for($y=1;$y<=5;$y++){
+					if($x+$y==6 || $x == $y){
+						echo "X"." ";
+					}
+					else{
+						echo "0"." ";
+					}
+				}
+				echo "<br> ";
+			}
+		?>
 
-
-<br>
-		<?php 
+    <br>
+    <?php 
 			for($x=1;$x<=5;$x++){
 				for($y=1;$y<=5;$y++){
 					if($x+$y==6||$x==$y||$y==3||$y==1||$x==1||$x==5){
@@ -201,8 +220,8 @@
 				echo "<br> ";
 			}
 		?>
-		<br>
-		<?php 
+    <br>
+    <?php 
 			for($x=1;$x<=5;$x++){
 				for($y=1;$y<=5;$y++){
 					if($x+$y==6||$y==3||$x==1||$x==5){
@@ -215,5 +234,6 @@
 				echo "<br> ";
 			}
 		?>
-	</body>
+</body>
+
 </html>

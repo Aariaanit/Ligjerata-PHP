@@ -81,7 +81,7 @@
 		<p>$_POST</p>
 		
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Email: <input type="text" name="Email">
+			Email: <input type="email" name="Email">
 			<input type="submit" value="Log in">
 		</form>
 		<?php
@@ -104,7 +104,7 @@
 		<p>$_GET</p>
 		
 		<form method="get" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Email: <input type="text" name="Email">
+			Email: <input type="email" name="Email">
 			<input type="submit" value="Log in">
 		</form>
 		<?php

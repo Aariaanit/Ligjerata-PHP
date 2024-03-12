@@ -22,7 +22,7 @@
 		{
 			echo '<script>alert("Username or Password is empty")</script>';
 		}
-		else if($a === 'arianit' && $b === 'tershnjaku')
+		else if($a === 'arianit' && $b === '044494134')
 		{
 			echo "<script>alert('Welcome!')</script>";
 			// echo "<script>window.open('login1.php','_self')</script>";

@@ -1,8 +1,10 @@
 <html>
-	<head>
-	</head>
-	<body>
-		<?php   //XML 
+
+<head>
+</head>
+
+<body>
+    <?php   //XML 
 		
         // print dhe echo na mundesojne shfaqjen e rezultatit
 		
@@ -11,8 +13,8 @@
 		
 
         ?>
-		
-        <?php
+
+    <?php
 		
         // echo duhet te shenohet brenda thonjezave, mirepo mund te shenohet edhe brenda kllapave
 		
@@ -24,8 +26,8 @@
             print "<h4>Shkolla \"Digjitale\"</h4><br>";
 	
         ?>
-        
-        <?php
+
+    <?php
         
         // Nese vlerat number i shenojme brenda thonjezave na praqet ashtu si jane
         
@@ -64,6 +66,6 @@
           
             //ECHO $x . $y;  //
 	
-		?> 
-	</body>
+		?>
+</body>
 <html>

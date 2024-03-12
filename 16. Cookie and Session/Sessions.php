@@ -3,18 +3,20 @@
 	session_start();
 ?>
 <html>
-	<head>
-	</head>
-	<body>
 
-		<?php
+<head>
+</head>
+
+<body>
+    <?php
 			$_SESSION['emri']='Arianit';
 			$_SESSION['mbiemri']='Tershnjaku';
 			echo 'Session set';
 			echo '<br>';
 			print_r($_SESSION); //Na mundeson nxjerrjen e te gjitha sessioneve qe gjendent tek variabla globale $_SESSION.
 		?>
-		<?php 	
+
+    <?php 	
 			if (!isset($_SESSION['count'])) 
 			{
 				$_SESSION['count'] = 1;
@@ -23,14 +25,15 @@
 			{
 				$_SESSION['count']++;
 			} 
-				echo $_SESSION['count']; ?>  
-		<?php
+				echo $_SESSION['count']; ?>
+    <?php
 			//I fshin te gjitha variablat e session.
 			//session_unset(); 
 			//E fshin kete session.
 			
 			//session_destroy();
 		?>
-		<a href='Sessions1.php'>next</a>
+    <a href='Sessions1.php'>next</a>
 </body>
+
 </html>

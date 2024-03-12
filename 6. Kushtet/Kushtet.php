@@ -1,8 +1,10 @@
 <html>
-	<head>
-	</head>
-	<body>
-		<?php
+
+<head>
+</head>
+
+<body>
+    <?php
         //Shembulli 1
 			//Te tregohet nese 5 eshte me i vogel se 10 permes kushteve
 			$x = 1;
@@ -16,8 +18,8 @@
 				echo "$x eshte me i madh se 10";
 			}
 		?>
-        <br>
-		<?php
+    <br>
+    <?php
             //Shembulli 2
 			$y = 16;
 			
@@ -36,8 +38,8 @@
 		?>
 
 
-        <br>
-		<?php
+    <br>
+    <?php
 			$a = 50; $b= 70;  $c =60;
 			
 			if($a > $b && $a > $c){
@@ -51,8 +53,8 @@
 			}
 
 			?>
-<br>
-<?php
+    <br>
+    <?php
 			$a = 100; $b= 130;  $c =80;
 			
 			if($a > $b){
@@ -74,7 +76,7 @@
 			}
 			
 			?>
-		<?php
+    <?php
 			//Shembulli 3
 			$piket = 50;
     
@@ -101,10 +103,10 @@
 				}
 
 		?>
-        <br>
-		<?php
+    <br>
+    <?php
             //Shembulli 4
-			$y = 10;
+			$y = 11;
 			
 			if($y % 2 == 0)
 			{
@@ -115,8 +117,8 @@
 				echo "Vlera e variablës është tek";
 			}
 		?>
-        <br>
-		<?php 
+    <br>
+    <?php 
             //Shembulli 5
 			$z = 20;
 			
@@ -165,8 +167,8 @@
 					echo 'Ky muaj nuk egziston!';
 			}
 		?>
-        <br>
-		<?php
+    <br>
+    <?php
             //Shembulli 6
 			$ditet = 'E Hene';
 			
@@ -204,23 +206,12 @@
 					echo 'Kjo dite nuk egziston';
 			}
 		?>
-		<br>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-		<?php
+    <br>
+
+
+
+
+    <?php
         /*
 			$row_styles = array('even','odd');
 			$style_index = 0;
@@ -238,8 +229,8 @@
 					print '</table>';
         */
 		?>
-		<br>
-		<?php
+    <br>
+    <?php
 
 		//prompt function
 	/*	function prompt($prompt_msg){
@@ -257,5 +248,6 @@
 			echo($output_msg);
 	*/
 ?>
-	</body>
+</body>
+
 </html>
