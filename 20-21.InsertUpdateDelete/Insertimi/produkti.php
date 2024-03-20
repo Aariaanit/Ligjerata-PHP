@@ -1,29 +1,31 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Insert to WEB</title>
-    </head>
-    <body>
+
+<head>
+    <title> Insert to WEB</title>
+</head>
+
+<body>
     <div>
         <?php               
-        $connect=mysqli_connect("localhost","root","","login");
-        mysqli_select_db($connect,"login");
+        try {
+            $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        if(isset($_GET['id'])){
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
 
-            $id = $_GET['id'];
+                $select = "SELECT * FROM upload WHERE id=:id";
+                $stmt = $pdo->prepare($select);
+                $stmt->bindParam(':id', $id);
+                $stmt->execute();
+                $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-            $select = "SELECT * FROM upload WHERE id='$id'";
-	
-            $query = mysqli_query($connect, $select);
-
-            $row=mysqli_fetch_array($query);
-	
-	        $fileId = $row['id'];
-            $fileName = $row['fileName'];
-            $fileUpload = $row['fileUpload'];
-            $description = $row['fileDescription'];
+                $fileId = $row['id'];
+                $fileName = $row['fileName'];
+                $fileUpload = $row['fileUpload'];
+                $description = $row['fileDescription'];
         ?>
         <h2>
             <a href="insert.php">
@@ -34,7 +36,13 @@
         <p>
             <?php echo $description; ?>
         </p>
-        <?php } ?>
-        </div>
-    </body>
+        <?php 
+            }
+        } catch (PDOException $e) {
+            echo 'Connection failed: ' . $e->getMessage();
+        }
+        ?>
+    </div>
+</body>
+
 </html>
