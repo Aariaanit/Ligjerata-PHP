@@ -84,6 +84,7 @@
 				return $x + $y;
 			}
 			echo mbledh();
+			echo $x;
 		?>
     <br>
     <?php

@@ -1,9 +1,11 @@
 <html>
-	<head>
-	</head>
-	<body>
 
-	<!-- 
+<head>
+</head>
+
+<body>
+
+    <!-- 
 		$GLOBALS
 		$_SERVER
 		$_REQUEST
@@ -14,13 +16,13 @@
 		$_COOKIE
 		$_SESSION
 	 -->
-		<p>$GLOBALS</p>
-		<?php
+    <p>$GLOBALS</p>
+    <?php
 			$a = 50;
 			$b = 20;
 		?>
-		<?php
-			$x = 75;
+    <?php
+			$x = 65;
 			$y = 25;
 			
 			function vlere()
@@ -35,8 +37,8 @@
 		
 		?>
 
-		<p>$_SERVER</p>
-		<?php
+    <p>$_SERVER</p>
+    <?php
 			
 			echo $_SERVER['PHP_SELF']; //tregon vendndodhjen e file qe jemi.
 			echo "<br>";
@@ -55,20 +57,20 @@
 			echo $_SERVER['REQUEST_METHOD']; //Kthen metodën e kërkesës së përdorur për të hyrë në faqe(siç është POST)
 			
 		?>
-		<p>$_REQUEST</p>
-		
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Username: <input type="text" name="Username">
-			<input type="submit" value="Log in">
-		</form>
-		<?php
+    <p>$_REQUEST</p>
+
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Username: <input type="text" name="Username">
+        <input type="submit" value="Log in">
+    </form>
+    <?php
 			
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				
 				// Mbledh apo merr vleren e inputit.
 				$x = $_REQUEST['Username'];
 				if (empty($x)) {
-					echo "<script>window.alert('Email is empty');</script>";
+					echo "<script>window.alert('Username is empty');</script>";
 				} 
 				else {
 					echo $x;
@@ -77,22 +79,24 @@
 				echo "<script>window.alert('Method is get');</script>";
 			}
 		?>
-         
-		<p>$_POST</p>
-		
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Email: <input type="email" name="Email">
-			<input type="submit" value="Log in">
-		</form>
-		<?php
+
+    <p>$_POST</p>
+
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Email: <input type="email" name="Email">
+        Password: <input type="password" name="Password">
+        <input type="submit" value="Log in">
+    </form>
+    <?php
 			
 			if ($_SERVER["REQUEST_METHOD"] == "POST") 
 			{
 				// Mbledh apo merr vleren e inputit.
 				$y = $_POST['Email'];
-				if (empty($y)) 
+				$z = $_POST['Password'];
+				if (empty($y) or empty($z)) 
 				{
-					echo "Email is empty";
+					echo "<script>window.alert('Email is empty');</script>";
 				} 
 				else 
 				{
@@ -100,34 +104,29 @@
 				}
 			}
 		?>
-        
-		<p>$_GET</p>
-		
-		<form method="get" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Email: <input type="email" name="Email">
-			<input type="submit" value="Log in">
-		</form>
-		<?php
+
+    <p>$_GET</p>
+
+    <form method="get" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Email: <input type="text" name="firstname">
+        <input type="submit" value="Log in">
+    </form>
+    <?php
 			
-			if ($_SERVER["REQUEST_METHOD"] == "GET") 
+		if ($_SERVER["REQUEST_METHOD"] == "GET") 
+		{
+			// Mbledh apo merr vleren e inputit.
+			$z = $_GET['firstname'];
+			if (empty($z)) 
 			{
-				// Mbledh apo merr vleren e inputit.
-				$z = $_GET['Email'];
-				if (empty($z)) 
-				{
-					echo "Email is empty";
-				} 
-				else 
-				{
-					echo $z;
-				}
-			}	
-		
-		
-		?>
-		
-		
-		
-		
-	</body>
+				echo "Email is empty";
+			} 
+			else 
+			{
+				echo $z;
+			}
+		}	
+	?>
+</body>
+
 </html>

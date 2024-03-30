@@ -1,43 +1,45 @@
 <?php
-    $connect = mysqli_connect('localhost','root','','login');
-        mysqli_select_db($connect,'login');
-        error_reporting();
-    if(isset($_POST['update']))
-    {
+    try {
+        $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $fileId = $_POST['id'];
-        $fileName1 = $_POST['fileName'];
-        $fileDescription1 =$_POST['description'];
-        $fileUpload1 = $_FILES['fileUpload'] ['name'];
-        $fileUpload1_tmp=$_FILES['fileUpload']['tmp_name'];
+        if(isset($_POST['update'])) {
 
-	    if(!move_uploaded_file($fileUpload1_tmp,"file/$fileUpload1")) {
-           
-            echo "<script>alert('You can't upload this image!')</script>";
-	    }
-        if($fileName1=='' || $fileDescription1=='' || $fileUpload1=='')
-        {  
-            echo "<script>alert('Ndonjera prej fushave eshte e zbrazet')</script>";
-            echo "<script>window.open('viewFile.php','_self');</script>";
-		    exit();
+            $fileId = $_POST['id'];
+            $fileName1 = $_POST['fileName'];
+            $fileDescription1 = $_POST['description'];
+            $fileUpload1 = $_FILES['fileUpload']['name'];
+            $fileUpload1_tmp = $_FILES['fileUpload']['tmp_name'];
+
+            if(!move_uploaded_file($fileUpload1_tmp, "file/$fileUpload1")) {
+                echo "<script>alert('You can't upload this image!')</script>";
+            }
+
+            if($fileName1 == '' || $fileDescription1 == '' || $fileUpload1 == '') {
+                echo "<script>alert('Ndonjera prej fushave eshte e zbrazet')</script>";
+                echo "<script>window.open('viewFile.php','_self');</script>";
+                exit();
+            } else {	
+                $update_query = "UPDATE upload SET
+                    fileName = :fileName1,
+                    fileUpload = :fileUpload1,
+                    fileDescription = :fileDescription1
+                    WHERE
+                    id = :fileId";
+                
+                $stmt = $pdo->prepare($update_query);
+                $stmt->bindParam(':fileName1', $fileName1);
+                $stmt->bindParam(':fileUpload1', $fileUpload1);
+                $stmt->bindParam(':fileDescription1', $fileDescription1);
+                $stmt->bindParam(':fileId', $fileId);
+                
+                if($stmt->execute()) {
+                    echo "<script>alert('File is updated!')</script>";
+                    echo "<script>window.open('viewFile.php','_self');</script>";
+                }
+            }
         }
-        else 
-        {	
-            $update_query="UPDATE upload SET
-                fileName = '$fileName1',
-                fileUpload = '$fileUpload1',
-                fileDescription = '$fileDescription1'
-                WHERE
-                id = '$fileId'";
-            
-            if(mysqli_query($connect, $update_query))
-            {
-		
-			     echo "<script>alert('File is updated!')</script>";
-                 echo "<script>window.open('viewFile.php','_self');</script>";
-			     //header("location: viewFile.php");
-		      }
-	    }
-    
+    } catch (PDOException $e) {
+        echo 'Connection failed: ' . $e->getMessage();
     }
 ?>
