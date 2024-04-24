@@ -10,13 +10,12 @@
 
 <body>
     <?php	
-				//require ('form2.php');
+			    //require ('form1.php');
 				include('form.php');
 				
 				//echo 'forma e pare';
 				include('navbar.php');
 		?>
-
     <p><span class="empty">* Required</span></p>
     <form method="post" action="">
         Username: <input type="text" name="Username">
@@ -26,9 +25,6 @@
         <input type="submit" value="Log in">
         <input type="reset" value="Cancel">
     </form>
-
-
-
 </body>
 
 </html>

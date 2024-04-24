@@ -31,7 +31,7 @@
 			//session_unset(); 
 			//E fshin kete session.
 			
-			//session_destroy();
+		//	session_destroy();
 		?>
     <a href='Sessions1.php'>next</a>
 </body>

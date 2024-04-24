@@ -1,25 +1,29 @@
-<html>
-	<head>
-	</head>
-	<body>
-		<?php
-			//Mbledhja e dy variablave
-			
-			$x = 7;
-			$y = 13;
-			
-			$z=$x+$y;
+    <?php
+    //Variablat shenohen me shenjen e dollarit "$"
+    //var name = 'Arianit';
+    $first_name = "Arianit";
+    $Name = "Arianiti";
 
-		    echo $z;
-		?>
-		<br>
-		<?php  
-			//Dallimi ne mes te ketyre dy variablave, $x dhe $$x eshte, variabla $$x mund te i qaset edhe vleres brenda variables me nje $x.
-			$x = "Prizren";  
-			$$x = "200";  
-			echo $x."<br>";  //konkatinimi behet edhe me "." edhe me ","
-			echo $$x."<br>";  
-			echo $Prizren;  
-		?>  
-	</body>
-</html>
+    //Rezultati mund te paraqitet ne dy menyrat e ndryshme
+    //document.write("my name is:"+name)
+    echo "My name is: $first_name <br>";
+
+    //Nese rezultatin e shenojme me thonjeza te njefishta atehere rezultati paraqitet ashtu siq eshte i shenuar
+
+    echo 'My name is:',$first_name,'!','<br>';
+
+    $x = 3;
+    $y = 5;
+
+    //Nese e shenojme pa thonjeza rezultati na mblidhet
+
+    echo $x + $y."<br>";
+
+    echo "$x + $y <br>";
+
+    echo $x . $y;
+    echo "<br>";
+
+    ECHO $x . $y; //
+
+	?>
