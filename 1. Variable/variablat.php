@@ -24,6 +24,6 @@
     echo $x . $y;
     echo "<br>";
 
-    ECHO $x . $y; //
+    ECHO $x . $y; // nuk preferohet
 
 	?>

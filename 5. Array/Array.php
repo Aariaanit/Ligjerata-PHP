@@ -28,7 +28,7 @@
     <br>
     <?php
 		//Associative Arrays - jane array me emra te qelsave
-		//I pari eshte qelesi ndersa e dyta vlera,p.sh "Arianit" eshte qelesi, ndersa "26" eshte vlera
+		//I pari eshte qelesi ndersa e dyta vlera,p.sh "id" eshte qelesi, ndersa "1" eshte vlera
 			$z = array( "id"=>1, "username"=>"Arianit", "password"=>"044494134");	
 
 			echo $z["username"];
