@@ -115,22 +115,22 @@
     <br>
     <br>
     <?php  
-				$a1 = "";  
-				var_dump($a1); //Tregon qe eshte string dhe eshte bosh.
-				echo "<br>";  
-				$a2 = null;  
-				var_dump($a2);  
-			?>
+		$a1 = "";  
+		var_dump($a1); //Tregon qe eshte string dhe eshte bosh.
+		echo "<br>";  
+		$a2 = null;  
+		var_dump($a2);  
+	?>
     <br>
     <br>
     <?php  
-				$x = NULL;  
-				var_dump($x);  
-				echo "<br>";  
-				$y = "Hello PHP!";  
-				$y = NULL;  
-				var_dump($y);  
-			?>
+		$x = NULL;  
+		var_dump($x);  
+		echo "<br>";  
+		$y = "Hello PHP!";  
+		$y = NULL;  
+		var_dump($y);  
+	?>
     <h3>Resource</h3>
     <?php  
 			//Ky tip i te dhenave eshte per lidhje nga jashte.

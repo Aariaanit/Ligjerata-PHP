@@ -1,48 +1,74 @@
+<?php
+include('connect.php');
+
+$errors = array();
+
+if (isset($_POST['login'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Validation and Sanitization
+    $username = htmlspecialchars($username);
+
+    if (empty($username) || empty($password)) {
+        array_push($errors, "Both username and password are required for login");
+    }
+
+    if (count($errors) == 0) {
+        $query = "SELECT * FROM users WHERE username=:username";
+        $checkQuery = $conn->prepare($query);
+        $checkQuery->bindParam(':username', $username);
+        $checkQuery->execute();
+        #$checkQuery->query();
+        $result = $checkQuery->fetch();
+
+        if ($result && password_verify($password, $result['password'])) {
+            // Login successful
+            echo "<script>alert('Login successful!')</script>";
+            echo "<script>window.open('admin.php','_self')</script>";
+        } else {
+            array_push($errors, "Invalid username or password");
+        }
+    }
+}
+
+?>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Login</title>
-	</head>
 
-    <body>
-        <form method="post" action="">
-            Username: <input type="text" name="Username"><br><br>
-            Password: <input type="password" name="Password"><br><br>
-            <input type="submit" name="login" value="Log in">
-            <input type="reset" name="cancel" value="Cancel">
-        </form>
-        <?php
-            $connect=mysqli_connect('localhost','root','','login');
-                mysqli_select_db($connect,'login');
+<head>
+    <title>Registration system PHP and MySQL</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-                if(isset($_POST['login']))
-                {
-                    $username=$_POST['Username'];
-                    $password=$_POST['Password'];
-                        
-                    $login = "SELECT * FROM admin_login WHERE username='$username' AND password='$password'";
-                        
-                    $query=mysqli_query($connect, $login);
-                        
-                        if(mysqli_num_rows($query)>0)
-                        {
-                            $_SESSION['username']=$username;
-                            
-                            echo "<script>
-                               window.open('admin.php','_self');
-                               </script>";
-                            echo "<script>alert('Welcome!');</script>";
-                        }
-                        else if(empty($username)||empty($password))
-                        {
-                            echo "<script>alert('Username ose Password jane te zbrazeta!');</script>";
-                        }
-                        else
-                        {
-                            echo "<script>
-                            alert('Username ose Password jane gabim!');
-                            </script>";
-                        }
-                }     
-        ?>
-    </body>
+<body>
+    <div class="header">
+        <h2>Login</h2>
+    </div>
+
+    <form method="post">
+        <?php  if (count($errors) > 0) { ?>
+        <div class="error">
+            <?php foreach ($errors as $error) { ?>
+            <p><?php echo $error ?></p>
+            <?php } ?>
+        </div>
+        <?php  } ?>
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" name="username">
+        </div>
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" name="password">
+        </div>
+        <div class="input-group">
+            <button type="submit" class="btn" name="login">Login</button>
+        </div>
+        <p>
+            Not yet a member? <a href="index.php">Sign up</a>
+        </p>
+    </form>
+</body>
+
 </html>
