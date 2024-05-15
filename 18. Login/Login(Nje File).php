@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
 <html>
 
 <head>
-    <title>Registration system PHP and MySQL</title>
+    <title>Login Form</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -66,7 +66,7 @@ if (isset($_POST['login'])) {
             <button type="submit" class="btn" name="login">Login</button>
         </div>
         <p>
-            Not yet a member? <a href="index.php">Sign up</a>
+            Not yet a member? <a href="#">Sign up</a>
         </p>
     </form>
 </body>

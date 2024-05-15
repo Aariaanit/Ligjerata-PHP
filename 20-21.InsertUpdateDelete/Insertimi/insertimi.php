@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -24,7 +20,7 @@ session_start();
 
 <?php
 try {
-    $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
+    include('connect.php');
 
     if (isset($_POST['upload'])) {
         $fileName = $_POST['fileName'];
@@ -37,11 +33,11 @@ try {
         } else {
             // Check if file already exists
             $select = "SELECT * FROM upload WHERE fileName=:fileName OR fileUpload=:fileUpload LIMIT 1";
-            $stmt = $pdo->prepare($select);
-            $stmt->bindParam(':fileName', $fileName);
-            $stmt->bindParam(':fileUpload', $fileUpload);
-            $stmt->execute();
-            $exist = $stmt->fetch(PDO::FETCH_ASSOC);
+            $query = $conn->prepare($select);
+            $query->bindParam(':fileName', $fileName);
+            $query->bindParam(':fileUpload', $fileUpload);
+            $query->execute();
+            $exist = $query->fetch(PDO::FETCH_ASSOC);
 
             if ($exist) {
                 echo "<script>alert('This file already exists!');</script>";
@@ -50,12 +46,12 @@ try {
 
                 $uploadFile = "INSERT INTO upload(fileName, fileUpload, fileDescription)
                                VALUES(:fileName, :fileUpload, :fileDescription)";
-                $stmt = $pdo->prepare($uploadFile);
-                $stmt->bindParam(':fileName', $fileName);
-                $stmt->bindParam(':fileUpload', $fileUpload);
-                $stmt->bindParam(':fileDescription', $fileDescription);
+                $query = $conn->prepare($uploadFile);
+                $query->bindParam(':fileName', $fileName);
+                $query->bindParam(':fileUpload', $fileUpload);
+                $query->bindParam(':fileDescription', $fileDescription);
 
-                if ($stmt->execute()) {
+                if ($query->execute()) {
                     echo "<script>alert('File is Upload');</script>";
                 } else {
                     echo "<script>alert('Upload Failed!');</script>";

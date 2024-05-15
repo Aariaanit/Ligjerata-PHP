@@ -120,7 +120,7 @@
     <br>
     <?php 
             //Shembulli 5
-			$z = 20;
+			$z = 2;
 			
 			switch($z)
 			{
