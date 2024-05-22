@@ -25,18 +25,17 @@
         </tr>
         <?php
         try {
-            $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            include('connect.php');
 
             $select = "SELECT * FROM upload";
-            $stmt = $pdo->query($select);
+            $query = $conn->query($select);
 
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                 $fileId = $row['id'];
                 $fileName = $row['fileName'];
                 $fileUpload = $row['fileUpload'];
                 $description = $row['fileDescription'];
-        ?>
+            ?>
         <tr>
             <td><?php echo $fileId; ?></td>
             <td><?php echo $fileName; ?></td>
@@ -45,10 +44,12 @@
         </tr>
         <?php
             }
-        } catch (PDOException $e) {
+        } 
+        catch (PDOException $e) {
             echo 'Connection failed: ' . $e->getMessage();
         }
         ?>
+
     </table>
 </body>
 

@@ -21,11 +21,10 @@
     <div class="product">
         <?php
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        include('connect.php');
 
         $select = "SELECT * FROM upload ORDER BY RAND() LIMIT 5";
-        $stmt = $pdo->query($select);
+        $stmt = $conn->query($select);
 
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $fileId = $row['id'];
