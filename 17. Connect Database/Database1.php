@@ -2,7 +2,7 @@
     $server = "localhost";  
     $user = "root";  //default user name is root  
     $pass = "";     //default password is blank  
-    $dbname = "shkolla";
+    $dbname = "shkolla1";
     $connect = mysqli_connect($server, $user, $pass, $dbname);  
     if(!$connect)  
         die("Connection failed".mysqli_connect_error());  

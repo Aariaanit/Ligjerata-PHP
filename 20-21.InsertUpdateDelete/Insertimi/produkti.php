@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -10,17 +9,16 @@
     <div>
         <?php               
         try {
-            $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+            include('connect.php');
+            
             if(isset($_GET['id'])){
                 $id = $_GET['id'];
 
                 $select = "SELECT * FROM upload WHERE id=:id";
-                $stmt = $pdo->prepare($select);
-                $stmt->bindParam(':id', $id);
-                $stmt->execute();
-                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+                $query = $conn->prepare($select);
+                $query->bindParam(':id', $id);
+                $query->execute();
+                $row = $query->fetch(PDO::FETCH_ASSOC);
 
                 $fileId = $row['id'];
                 $fileName = $row['fileName'];

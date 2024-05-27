@@ -13,7 +13,7 @@ else{
 
 echo "Connected successfully";
 // Create database
-  $sql = "CREATE DATABASE test123";
+  $sql = "CREATE DATABASE test1";
   if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
   } else {

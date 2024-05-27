@@ -11,7 +11,6 @@
 				echo "Arianit Tershnjaku"; //Vendosja e "echo" brenda funksionit.
 			}
 			x(); //Thirrja e nje funksioni
-			
 		?>
     <br>
     <?php
@@ -38,7 +37,7 @@
 			{	
 				echo $x + $y;//Vendosja e "echo" brenda funksionit.
 				echo "<br>";
-				echo "$x * $y"; //Pyetje? Qfare rezultati na jep?
+				echo "$x" * "$y"; //Pyetje? Qfare rezultati na jep?
 			}
 			vlera(5,5); //Thirrja e nje funksioni
 		?>

@@ -24,9 +24,9 @@
         include('connect.php');
 
         $select = "SELECT * FROM upload ORDER BY RAND() LIMIT 5";
-        $stmt = $conn->query($select);
+        $query = $conn->query($select);
 
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
             $fileId = $row['id'];
             $fileName = $row['fileName'];
             $fileUpload = $row['fileUpload'];
