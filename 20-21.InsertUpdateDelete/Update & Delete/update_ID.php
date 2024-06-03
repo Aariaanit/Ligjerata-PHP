@@ -1,7 +1,6 @@
 <?php
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        include('../Insertimi/connect.php');
 
         if(isset($_POST['update'])) {
 
@@ -11,7 +10,7 @@
             $fileUpload1 = $_FILES['fileUpload']['name'];
             $fileUpload1_tmp = $_FILES['fileUpload']['tmp_name'];
 
-            if(!move_uploaded_file($fileUpload1_tmp, "file/$fileUpload1")) {
+            if(!move_uploaded_file($fileUpload1_tmp, "../file/$fileUpload1")) {
                 echo "<script>alert('You can't upload this image!')</script>";
             }
 
@@ -27,13 +26,13 @@
                     WHERE
                     id = :fileId";
                 
-                $stmt = $pdo->prepare($update_query);
-                $stmt->bindParam(':fileName1', $fileName1);
-                $stmt->bindParam(':fileUpload1', $fileUpload1);
-                $stmt->bindParam(':fileDescription1', $fileDescription1);
-                $stmt->bindParam(':fileId', $fileId);
+                $query = $conn->prepare($update_query);
+                $query->bindParam(':fileName1', $fileName1);
+                $query->bindParam(':fileUpload1', $fileUpload1);
+                $query->bindParam(':fileDescription1', $fileDescription1);
+                $query->bindParam(':fileId', $fileId);
                 
-                if($stmt->execute()) {
+                if($query->execute()) {
                     echo "<script>alert('File is updated!')</script>";
                     echo "<script>window.open('viewFile.php','_self');</script>";
                 }

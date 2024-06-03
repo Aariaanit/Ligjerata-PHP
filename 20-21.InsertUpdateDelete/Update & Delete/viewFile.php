@@ -26,13 +26,12 @@
         </tr>
         <?php
         try {
-            $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            include('../Insertimi/connect.php');
             
             $select = "SELECT * FROM upload";
-            $stmt = $pdo->query($select);
+            $query = $conn->query($select);
             
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
                 $fileName = $row['fileName'];
                 $fileUpload = $row['fileUpload'];

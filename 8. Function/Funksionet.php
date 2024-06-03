@@ -78,8 +78,8 @@
 			$y = 7;
 			function mbledh()
 			{
-				$x = 10;
-				$y = 7;
+				// $x = 10;
+				// $y = 7;
 				return $x + $y;
 			}
 			echo mbledh();

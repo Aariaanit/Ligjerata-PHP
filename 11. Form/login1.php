@@ -25,7 +25,7 @@
 		}
 		else if($a === 'arianit' && $b === '044494134')
 		{
-			//echo "<script>alert('Welcome!')</script>";
+			echo "<script>alert('Welcome!')</script>";
 			echo "<script>window.open('admin.php','_self')</script>";
 		}
 		else

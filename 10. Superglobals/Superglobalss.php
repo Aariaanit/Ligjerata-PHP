@@ -34,7 +34,6 @@
 			}
 			vlere();
 			echo $z;
-		
 		?>
 
     <p>$_SERVER</p>
@@ -84,7 +83,6 @@
 
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
         Email: <input type="email" name="Email">
-        Password: <input type="password" name="Password">
         <input type="submit" value="Log in">
     </form>
     <?php
@@ -93,8 +91,7 @@
 			{
 				// Mbledh apo merr vleren e inputit.
 				$y = $_POST['Email'];
-				$z = $_POST['Password'];
-				if (empty($y) or empty($z)) 
+				if (empty($y)) 
 				{
 					echo "<script>window.alert('Email is empty');</script>";
 				} 

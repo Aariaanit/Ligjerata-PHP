@@ -9,16 +9,15 @@
 <body>
     <?php
     try {
-        $pdo = new PDO('mysql:host=localhost;dbname=testdb', 'root', '');
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        include('../Insertimi/connect.php');
 
         if(isset($_GET['update'])){
             $update_id = $_GET['update'];
             $select = "SELECT * FROM upload WHERE id=:id";
-            $stmt = $pdo->prepare($select);
-            $stmt->bindParam(':id', $update_id);
-            $stmt->execute();
-            $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            $query = $conn->prepare($select);
+            $query->bindParam(':id', $update_id);
+            $query->execute();
+            $row = $query->fetch(PDO::FETCH_ASSOC);
 ?>
     <form method='post' action="update_ID.php" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $row['id'];?>">
