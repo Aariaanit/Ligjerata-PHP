@@ -22,7 +22,7 @@
 			{
 				$empUsername ="Username is required";
 			}
-			else if (!preg_match("/^[a-zA-ZëË0-9]*$/",$username)) 
+			else if (!preg_match("/^[a-zA-ZëË ]*$/",$username)) 
 			{
 				$empUsername = "Only letters and white space allowed";
 			}
@@ -37,9 +37,9 @@
 				$empUsername ="Username is required";
 				$empPassword ="Password is required";
 				$empEmail ="Email is required";
-				// echo '<script>alert("Required!")</script>';
+				// echo '<script>alert("Required!")</scrixpt>';
 			}
-			else if($username !="" and $password != "" and $email != "" and preg_match("/^[a-zA-ZëË0-9]*$/",$username))
+			else if($username !="" and $password != "" and $email != "" and preg_match("/^[a-zA-ZëË ]*$/",$username))
 			{
 				echo '<script>alert("Register Succesfully!")</script>';
 			}

@@ -9,7 +9,7 @@
             $fileDescription1 = $_POST['description'];
             $fileUpload1 = $_FILES['fileUpload']['name'];
             $fileUpload1_tmp = $_FILES['fileUpload']['tmp_name'];
-
+            
             if(!move_uploaded_file($fileUpload1_tmp, "../file/$fileUpload1")) {
                 echo "<script>alert('You can't upload this image!')</script>";
             }

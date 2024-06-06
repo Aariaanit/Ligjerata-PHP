@@ -15,6 +15,12 @@
 </head>
 
 <body>
+
+    <form method="get" action="search.php">
+        <input type="search" name="value" placeholder="Search File Name">
+        <input type="submit" name="search" value="Search">
+    </form>
+    <br><br>
     <table>
         <tr>
             <td>Id File</td>
@@ -52,7 +58,9 @@
             echo 'Connection failed: ' . $e->getMessage();
         }
         ?>
+
     </table>
+
 </body>
 
 </html>
