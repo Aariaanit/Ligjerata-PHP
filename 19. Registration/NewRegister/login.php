@@ -37,7 +37,7 @@ if (isset($_POST['login'])) {
 
 <head>
     <title>Registration system PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>

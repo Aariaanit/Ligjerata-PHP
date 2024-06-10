@@ -1,5 +1,5 @@
 <?php
-    require 'phpmailer/PHPMailerAutoload.php';
+    require 'PHPMailerAutoload.php';
     $mail = new PHPMailer;
     $mail ->isSMTP();
     
@@ -8,11 +8,11 @@
     $mail ->SMTPAuth = true;
     $mail ->SMTPSecure = 'tls';
     
-    $mail ->Username = 'shkolladigjitaleprizren@gmail.com';
-    $mail ->Password ='usnnfecgcqswdjss';
-    $mail ->setFrom('shkolladigjitaleprizren@gmail.com','ShkollaDigjitalePrizren');
+    $mail ->Username = 'arianittershnjaku@gmail.com';
+    $mail ->Password ='ficxirnpbbezqnb';
+    $mail ->setFrom('arianittershnjaku@gmail.com','ShkollaDigjitalePrizren');
     $mail ->addAddress('arianittershnjaku@gmail.com');
-    $mail ->addReplyTo('shkolladigjitaleprizren@gmail.com');
+    $mail ->addReplyTo('arianittershnjaku@gmail.com');
     
     $mail ->isHTML(true);
     $mail ->Subject = 'PHP Mailer Subject';
@@ -23,7 +23,6 @@
         echo 'Error: '. $mail->ErrorInfo;
     }
     else{
-    
         echo "Message has been send!";
 }
 
