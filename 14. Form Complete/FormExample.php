@@ -60,10 +60,10 @@ if ($SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-function secur(data) {
-  $data = trim(data);
-  $data = stripslashes(data);
-  $data = htmlspecialchars(data);
+function secure($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
   return $data;
 }
 ?>

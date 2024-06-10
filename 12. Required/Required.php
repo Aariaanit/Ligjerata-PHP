@@ -36,7 +36,7 @@
 				$empEmail ="Email is required";
 				// echo '<script>alert("Required!")</script>';
 			}
-			else if($username !="" and $password != "" and $email != "")
+			else if($username !="" and $password !="" and $email !="")
 			{
 				echo '<script>alert("Register Succesfully!")</script>';
 			}

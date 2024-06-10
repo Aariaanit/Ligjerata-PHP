@@ -5,7 +5,7 @@
 
 <body>
 
-    <form method="post" action="login1.php">
+    <form method="post">
         Username: <input type="text" name="Username"><br><br>
         Password: <input type="password" name="Password"><br><br>
         <input type="submit" value="Log in">
@@ -26,7 +26,7 @@
 		else if($a === 'arianit' && $b === '044494134')
 		{
 			echo "<script>alert('Welcome!')</script>";
-			echo "<script>window.open('admin.php','_self')</script>";
+			//echo "<script>window.open('admin.php','_self')</script>";
 		}
 		else
 		{
@@ -37,8 +37,4 @@
 	{
 		echo '<script>alert("Metoda nuk eshte POST!")</script>';
 	}
-?>
-<?php
-	//include('login.php');
-
 ?>
