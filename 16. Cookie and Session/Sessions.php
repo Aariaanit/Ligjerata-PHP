@@ -15,7 +15,6 @@
 			echo '<br>';
 			print_r($_SESSION); //Na mundeson nxjerrjen e te gjitha sessioneve qe gjendent tek variabla globale $_SESSION.
 		?>
-
     <?php 	
 			if (!isset($_SESSION['count'])) 
 			{
@@ -31,7 +30,7 @@
 			//session_unset(); 
 			//E fshin kete session.
 			
-		//	session_destroy();
+		//session_destroy();
 		?>
     <a href='Sessions1.php'>next</a>
 </body>

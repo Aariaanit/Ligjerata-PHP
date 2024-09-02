@@ -44,7 +44,7 @@ if(!$mail->send()){
 }else{
 	//echo 'Message has been sent';
     echo "<script>alert('Message has been sent!')</script>";
-    echo "<script>window.open('send.php','_self');</script>";
+    echo "<script>window.open('send1.php','_self');</script>";
     
 }	
 
