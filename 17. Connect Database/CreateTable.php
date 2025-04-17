@@ -1,7 +1,7 @@
 <?php
 
     $host = "localhost";
-    $db = "testdb2";
+    $db = "prizren";
     $user = "root";
     $pass = "";
 
@@ -10,7 +10,7 @@
         $sql = "CREATE TABLE users (
             id INT(6) NOT NULL AUTO_INCREMENT,
             username VARCHAR(30) NOT NULL,
-            password VARCHAR(50) NOT NULL,
+            password VARCHAR(100) NOT NULL,
             email VARCHAR(50) NOT NULL,
             PRIMARY KEY(id)
              )";

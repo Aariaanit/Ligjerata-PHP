@@ -18,7 +18,7 @@
             </tr>
             <?php               
                 try {
-                    include('../Insertimi/connect.php');
+                    include('connect.php');
                     
                     if (isset($_GET['search'])) {
                         $search = '%'.$_GET['value'].'%';
@@ -37,7 +37,7 @@
             <tr>
                 <td><?php echo htmlspecialchars($id); ?></td>
                 <td><?php echo htmlspecialchars($fileName); ?></td>
-                <td><img src="../file/<?php echo htmlspecialchars($fileUpload); ?>" width="80" height="60"></td>
+                <td><img src="../assets/<?php echo htmlspecialchars($fileUpload); ?>" width="80" height="60"></td>
                 <td><?php echo htmlspecialchars($description); ?></td>
                 <td><a href="delete.php?delete=<?php echo htmlspecialchars($id); ?>"
                         onclick="return confirm('A jeni i sigurt!')">Delete</a></td>

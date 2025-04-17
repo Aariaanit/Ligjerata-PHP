@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <form method="post" action="insertimi.php" enctype="multipart/form-data">
+    <form method="post" enctype="multipart/form-data">
         File Name: <input type="text" name="fileName"><br><br>
         File Upload: <input type="file" name="fileUpload"><br><br>
         File Description: <textarea name='fileDescription' cols='30' rows='15'></textarea><br><br>
@@ -42,7 +42,7 @@ try {
             if ($exist) {
                 echo "<script>alert('This file already exists!');</script>";
             } else {
-                move_uploaded_file($fileUpload_tmp, "../file/$fileUpload");
+                move_uploaded_file($fileUpload_tmp, "../assets/$fileUpload");
 
                 $uploadFile = "INSERT INTO upload(fileName, fileUpload, fileDescription)
                                VALUES(:fileName, :fileUpload, :fileDescription)";
@@ -53,8 +53,6 @@ try {
 
                 if ($query->execute()) {
                     echo "<script>alert('File is Upload');</script>";
-                } else {
-                    echo "<script>alert('Upload Failed!');</script>";
                 }
             }
         }

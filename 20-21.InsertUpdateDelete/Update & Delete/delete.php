@@ -1,6 +1,6 @@
 <?php
 try {
-    include('../Insertimi/connect.php');
+    include('connect.php');
 
     if(isset($_GET['delete'])) {
         $delete_id = $_GET['delete'];

@@ -32,21 +32,22 @@
         </tr>
         <?php
         try {
-            include('../Insertimi/connect.php');
+            include('connect.php');
             
             $select = "SELECT * FROM upload";
             $query = $conn->query($select);
-            
+            $x = 0;
             while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
                 $id = $row['id'];
                 $fileName = $row['fileName'];
                 $fileUpload = $row['fileUpload'];
                 $description = $row['fileDescription'];
+                $x++;
         ?>
         <tr>
-            <td><?php echo $id; ?></td>
+            <td><?php echo $x; ?></td>
             <td><?php echo $fileName; ?></td>
-            <td><img src="../file/<?php echo $fileUpload; ?>" width="80" height="60"></td>
+            <td><img src="../assets/<?php echo $fileUpload; ?>" width="80" height="60"></td>
             <td><?php echo $description; ?></td>
             <td><a href="delete.php?delete=<?php echo $id; ?>" onclick="return confirm('A jeni i sigurt!')">Delete</a>
             </td>
@@ -64,3 +65,5 @@
 </body>
 
 </html>
+
+<a href="mail.php">Forget Password</a>

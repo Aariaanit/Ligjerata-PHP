@@ -8,7 +8,7 @@ try{
     $conn->exec($sql);
     echo "Database is created";
 }catch(Exception $e){
-    echo "Database not created, something went wrong!";
+    echo "Database not created: " . $e->getMessage();
 }
 
 ?>

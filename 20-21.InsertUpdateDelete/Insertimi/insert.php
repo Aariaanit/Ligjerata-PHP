@@ -23,7 +23,7 @@
     try {
         include('connect.php');
 
-        $select = "SELECT * FROM upload ORDER BY RAND() LIMIT 5";
+        $select = "SELECT * FROM upload ORDER BY id desc";
         $query = $conn->query($select);
 
         while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -37,7 +37,7 @@
                 <?php echo $fileName; ?>
             </a>
         </h2>
-        <img src="../file/<?php echo $fileUpload; ?>">
+        <img src="../assets/<?php echo $fileUpload; ?>">
         <p>
             <?php echo $description; ?>
         </p>

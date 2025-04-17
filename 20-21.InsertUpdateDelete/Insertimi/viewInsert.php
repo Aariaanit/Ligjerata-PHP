@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Insert</title>
     <style>
-    table,
-    td,
-    th {
-        border: 2px solid black;
-        border-collapse: collapse;
-        width: 500px;
-        height: 50px;
-    }
+        table,
+        td,
+        th {
+            border: 2px solid black;
+            border-collapse: collapse;
+            width: 500px;
+            height: 50px;
+        }
     </style>
 </head>
 
 <body>
     <table>
         <tr>
-            <td>Id File</td>
+            <td>File Id</td>
             <td>File Name</td>
             <td>File Upload</td>
             <td>Description</td>
@@ -34,12 +35,13 @@
                 $fileId = $row['id'];
                 $fileName = $row['fileName'];
                 $fileUpload = $row['fileUpload'];
-                $description = $row['fileDescription'];
+                $description = substr($row['fileDescription'], 0, 100);
+                
             ?>
         <tr>
             <td><?php echo $fileId; ?></td>
             <td><?php echo $fileName; ?></td>
-            <td><img src="../file/<?php echo $fileUpload; ?>" width="80" height="60"></td>
+            <td><img src="../assets/<?php echo $fileUpload; ?>" width="80" height="60"></td>
             <td><?php echo $description; ?></td>
         </tr>
         <?php

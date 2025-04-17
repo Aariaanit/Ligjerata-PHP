@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css?v<?php time ();?>">
+    <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css?v<?php time ();?>">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="assets/vendors/jvectormap/jquery-jvectormap.css?v<?php time ();?>">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css?v<?php time ();?>">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.carousel.min.css?v<?php time ();?>">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel-2/owl.theme.default.min.css?v<?php time ();?>">
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="assets/css/style.css?v<?php time ();?>">

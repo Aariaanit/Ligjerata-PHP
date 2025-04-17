@@ -9,9 +9,9 @@
     $mail ->SMTPSecure = 'tls';
     
     $mail ->Username = 'arianittershnjaku@gmail.com';
-    $mail ->Password ='zfschfmkzoccaysy';
+    $mail ->Password ='tpmmbjabwsijvmml1';
     $mail ->setFrom('arianittershnjaku@gmail.com','ShkollaDigjitalePrizren');
-    $mail ->addAddress('arianittershnjaku@gmail.com');
+    $mail ->addAddress('shkolladigjitaleprizren@gmail.com');
     $mail ->addReplyTo('arianittershnjaku@gmail.com');
     
     $mail ->isHTML(true);

@@ -9,7 +9,7 @@
 <body>
     <?php
     try {
-        include('../Insertimi/connect.php');
+        include('connect.php');
 
         if(isset($_GET['update'])){
             $update_id = $_GET['update'];
@@ -23,8 +23,8 @@
         <input type="hidden" name="id" value="<?php echo $row['id'];?>">
         File Name:<input type="text" name="fileName" value="<?php echo $row['fileName'];?>">
         <br><br>
-        File Upload:<input type="file" name="fileUpload" placeholder="../file/<?php echo $row['fileUpload'];?>">
-        <img src="../file/<?php echo $row['fileUpload'];?>" width="100" height="100">
+        File Upload:<input type="file" name="fileUpload" placeholder="../assets/<?php echo $row['fileUpload'];?>">
+        <img src="../assets/<?php echo $row['fileUpload'];?>" width="100" height="100">
         <br><br>
         File Description:<textarea name="description" cols="30" rows="20"><?php echo $row['fileDescription'];?>
                 </textarea>

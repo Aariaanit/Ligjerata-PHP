@@ -67,7 +67,7 @@ if(isset($_POST["submit"]))
 	$mail->Port = 587;								//Sets the default SMTP server port
 	$mail->SMTPAuth = true;							//Sets SMTP authentication. Utilizes the Username and Password variables
 	$mail->Username = 'arianittershnjaku@gmail.com';					//Sets SMTP username
-	$mail->Password = 'ficxirnpbbezqnbd';					//Sets SMTP password
+	$mail->Password = 'tpmmbjabwsijvmml';					//Sets SMTP password
 	$mail->SMTPSecure = 'tls';							//Sets connection prefix. Options are "", "ssl" or "tls"
 	
 	$mail->From = $_POST["email"];					//Sets the From email address for the message

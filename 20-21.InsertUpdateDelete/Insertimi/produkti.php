@@ -30,7 +30,7 @@
                 <?php echo $fileName; ?>
             </a>
         </h2>
-        <img src="../file/<?php echo $fileUpload; ?>">
+        <img src="../assets/<?php echo $fileUpload; ?>">
         <p>
             <?php echo $description; ?>
         </p>
