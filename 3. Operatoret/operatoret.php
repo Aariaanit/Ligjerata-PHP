@@ -99,7 +99,7 @@
             echo "<br>";
 			$c = ($x > 30 xor $y > 30);  //T ^ T = F
                                          //F ^ F = F
-			var_dump($c);                //T ^ F = T
+			var_dump($c);        //T ^ F = T
                                          //F ^ T = T
             
 		?>

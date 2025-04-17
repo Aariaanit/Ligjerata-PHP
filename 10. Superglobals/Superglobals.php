@@ -1,14 +1,16 @@
 <html>
-	<head>
-	</head>
-	<body>
-		<p>$GLOBALS</p>
-		<?php
+
+<head>
+</head>
+
+<body>
+    <p>$GLOBALS</p>
+    <?php
 			$a = 10;
 			$b = 20;
            //echo $a;
 		?>
-		<?php
+    <?php
 			/*$ GLOBALS është një variabël super globale PHP e cila përdoret për të hyrë në variabla globale nga kudo në skriptin PHP (gjithashtu nga brenda funksioneve ose metodave). PHP ruan të gjitha variablat globale në një grup të quajtur $GLOBALS [indeksi].
             Indeksi mban emrin e variables x.*/
 			$x = 75;
@@ -23,8 +25,8 @@
 			echo $z;
 		
 		?>
-		<p>$_SERVER</p>
-		<?php
+    <p>$_SERVER</p>
+    <?php
 			//$ _SERVER është një variabël super globale PHP, e cila mban informacione në lidhje me headers, 
 			//paths dhe vendndodhjet e script-ave.
 			//Shembulli më poshtë tregon se si të përdorni disa nga elementët në $ _SERVER:
@@ -46,12 +48,12 @@
 			echo $_SERVER['REQUEST_METHOD']; //Kthen metodën e kërkesës së përdorur për të hyrë në faqe(siç është POST)
 			
 		?>
-		<p>$_REQUEST</p>
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-			Name: <input type="text" name="fname">
-			<input type="submit">
-		</form>
-		<?php
+    <p>$_REQUEST</p>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+        Name: <input type="text" name="fname">
+        <input type="submit">
+    </form>
+    <?php
 			/*PHP $ _REQUEST përdoret për të mbledhur të dhëna pasi të paraqisni një formë HTML.
 				Shembulli më poshtë tregon një formë me një fushë hyrëse dhe një buton dorëzimi. 
 				Kur një përdorues paraqet të dhënat duke klikuar në "Paraqit", 
@@ -74,9 +76,9 @@
 				}
             }
 		?>
-        
-		<p>$_POST</p>
-		<?php
+
+    <p>$_POST</p>
+    <?php
 			/*Informacioni i dërguar nga një formë me metodën POST është i padukshëm për të tjerët 
 			(të gjithë emrat / vlerat janë ngulitur në trupin e kërkesës HTTP) dhe nuk kanë kufij në 
 			sasinë e informacionit që duhet të dërgoni.
@@ -111,8 +113,8 @@
 		
 		
 		?>
-		<p>$_GET</p>
-		<?php
+    <p>$_GET</p>
+    <?php
 			/*Informacioni i dërguar nga një formë me metodën GET është i dukshëm për të gjithë 
 			(të gjithë emrat dhe vlerat e variablave shfaqen në URL). 
 			GET gjithashtu ka kufizime në sasinë e informacionit për të dërguar. 
@@ -123,9 +125,10 @@
 			GET nuk duhet te përdoret për dërgimin e fjalëkalimeve ose informacione të tjera të ndjeshme!*/	
 		?>
 
-		<a href="Array.php?subject=PHP&web=W3schools.com">Test $GET</a>
-		<a href="test_get.php?subject=PHP&web=W3schools.com "> Provo $ GET </a>
-		
-		
-	</body>
+    <a href="Array.php?subject=PHP&web=W3schools.com">Test $GET</a>
+    <a href="test_get.php?subject=PHP&web=W3schools.com "> Provo $ GET </a>
+
+
+</body>
+
 </html>

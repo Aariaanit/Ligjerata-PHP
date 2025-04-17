@@ -38,7 +38,7 @@ if (isset($_POST['login'])) {
 
 <head>
     <title>Login Form</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
