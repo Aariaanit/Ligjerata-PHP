@@ -99,7 +99,6 @@ is_long () - alias i is_int ()*/
 		<h2>Finit</h2>
 		
 		<?php
-		
 			$x = 1.2;
             var_dump($x);
 			echo is_finite($x);
@@ -107,14 +106,12 @@ is_long () - alias i is_int ()*/
             echo var_dump(is_finite($x));
 		?>
 		<br>
-		
 		<h2>Not A Number</h2>
 		<?php
-			$z=200;
+			$z=123;
 			var_dump(is_nan($z)) . "<br>";
 			echo is_nan(acos(1.01));
+
 		?>
-		
-		
 	</body>
 </html>

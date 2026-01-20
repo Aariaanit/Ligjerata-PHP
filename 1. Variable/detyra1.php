@@ -21,9 +21,9 @@
 			$siperfaqja = $brinja * $brinja1;
 			$perimetri = (2 * $brinja)+(2 * $brinja1);
 			
-			echo 'Siperfaqja e paralelogramit eshte: '.$siperfaqja;
+			echo 'Siperfaqja e drejtkendeshit eshte: '.$siperfaqja . 'cm<sup>2</sup>';
 			echo '<br>';
-			echo 'Perimetri i paralelogramit eshte: '.$perimetri;
+			echo 'Perimetri i drejtkendeshit eshte: '.$perimetri . 'cm';
 		?>
 	</body>
 </html>

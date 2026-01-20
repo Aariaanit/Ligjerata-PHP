@@ -62,10 +62,7 @@
 				}
 			}
 		?>
-
-
     <p>Foreach Loops</p>
-
     <?php
 		//foreach vlen vetem per array.
 			$txt = array(1,28,3,4,5,6,7,90);
@@ -99,15 +96,13 @@
 		?>
     <br><br>
     <?php 
-		
-				for($x=1;$x<=5;$x++){
-					for($y=1;$y<=5;$y++){
-						echo $x." ";
-						
-					}
-					echo "<br> ";
-				}
-		?>
+		for($x=1;$x<=5;$x++){
+			for($y=1;$y<=5;$y++){
+				echo $x." ";
+			}
+			echo "<br> ";
+		}
+	?>
     <br><br>
     <?php 
 			// for ($i = 1; $i <= 5; $i++) {
@@ -116,20 +111,20 @@
 			// 	}
 			// 	echo "<br>";
 			// }
-		?>
+	?>
     <br>
     <?php 
-				$z = 1;
+		$z = 1;
 		
-				for($x=1;$x<=5;$x++){
-					for($y=1;$y<=5;$y++){
-						echo $z." ";
-						$z++;
-					}
-					$z=$x;
-					echo "<br> ";
-				}
-		?>
+		for($x=1;$x<=5;$x++){
+			for($y=1;$y<=5;$y++){
+				echo $z." ";
+				$z++;
+			}
+			$z=$x+1;
+			echo "<br> ";
+		}
+	?>
     <br><br>
     <?php 
 		
@@ -139,43 +134,41 @@
 			}
 			echo "<br> ";
 		}
-?>
+	?>
     <br><br>
     <?php 
-				$z = 1;
+		$z = 1;
 		
-				for($x=1;$x<=5;$x++){
-					for($y=1;$y<=$x;$y++){
-						echo "*"." ";	
-					}	
-					echo "<br> ";
-				}
-		?>
+		for($x=1;$x<=5;$x++){
+			for($y=1;$y<=$x;$y++){
+				echo "*"." ";	
+			}	
+			echo "<br> ";
+		}
+	?>
     <br><br>
     <?php 
-				for($x=1;$x<=5;$x++){
-					for($y=5;$y>=$x;$y--){
-						echo "*"." ";
-					}
-					echo "<br> ";
-				}
-		?>
+		for($x=1;$x<=5;$x++){
+			for($y=5;$y>=$x;$y--){
+				echo "*"." ";
+			}
+			echo "<br> ";
+		}
+	?>
     <br><br>
     <?php 
-				
-		
-				for($x=1;$x<=5;$x++){
-					for($y=1;$y<=5;$y++){
-						if($x == $y){
-							echo "X"." ";
-						}
-						else{
-							echo "0"." ";
-						}
-					}
-					echo "<br> ";
+		for($x=1;$x<=5;$x++){
+			for($y=1;$y<=5;$y++){
+				if($x == $y){
+					echo "X"." ";
 				}
-		?>
+				else{
+					echo "0"." ";
+				}
+			}
+			echo "<br> ";
+		}
+	?>
     <br><br>
     <?php 
 			for($x=1;$x<=5;$x++){
@@ -234,5 +227,4 @@
 			}
 		?>
 </body>
-
 </html>

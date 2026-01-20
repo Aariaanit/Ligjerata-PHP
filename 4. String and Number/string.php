@@ -6,6 +6,7 @@
 <body>
     <?php
 			//Na mundeson gjetjen e gjatesis se stringut.
+			//method()
 			echo strlen(" Prizren ");
 		?>
     <br>

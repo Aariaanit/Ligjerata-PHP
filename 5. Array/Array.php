@@ -5,19 +5,19 @@
 
 <body>
     <h2>Arrays</h2>
-    <?php 
+    <?php
 		//Indexed Arrays -jane array me indeksa numerik
 		//Krijimi i nje Array
 			$x = array("Shkolla","Digjitale","Prizren");
         
 			//Menyra se si mund te ju qasemi elementeve te Array, permes Index.
 			echo $x[0]."<br>".$x[1]."<br>".$x[2];
-        	echo $x;
+        	//echo $x;
             echo "<br>";
             var_dump($x);
 			echo "<br>";
 			print_r($x);
-		?>
+	?>
     <br>
     <?php
 			//Count(), kjo metod na mundeson te gjejme gjatesin e array.
@@ -57,7 +57,7 @@
 			// echo "<br>";
             
 			//per ti nxjerr vetem si vlera nga array e perdorim for loop.
-			$y = count($x); //vlera 9
+			$y = count( $x); //vlera 9
 			for ($z = 0; $z < $y; $z++)
 			{
 				echo $x[$z];
@@ -154,29 +154,6 @@
 				echo "<br>";
 			}
 		?>
-    <h3>Multidimensional Array</h3>
-    <?php  
-            //Multidimensional Array
-            //Array multidimensional ne PHP njihet gjithashtu si grup i array. 
-            //Kjo ju lejon të ruani të dhëna tabelore në një grup. 
-            //Array multidimensional ne PHP mund të paraqitet në formën e matricës e cila përfaqësohet nga kolona dhe rresht.
-            
-            $arr = array(  
-                    array(4,"Prizren",20000,"Kalaja"),  //row 1 4 -00
-                    array(1,"Prishtine",10000,"Newborn"),//row 2
-                    array(7,"Gjakove",50000,"Qarshia")   //row 3
-                    );  
-					$c = count($arr); //3
-					$d = count($arr)+1; //4
-					//$arr[$row][$col];
-  
-            for ($row = 0; $row < $c; $row++) {  
-                for ($col = 0; $col < $d; $col++) {  
-                    echo $arr[$row][$col]."  ";  
-                }  
-                echo "<br>";  
-            }  
-        ?>
 
     <h3>pop()</h3>
     <?php
@@ -214,24 +191,6 @@
 			array_splice($text, 2, 2, "Prishtine");
 			print_r($text);
 		?>
-    <br>
-    <?php
-				//echo "<script>document.write('Prizren');</script>";
-				//Detyra 4
-				// $x = array(3,54,12,2,3,4,9,8,5);
-				// sort($x);
-				
-				// echo "<br>";
-				
-				// $y = count($x)-1; //vlera 9
-				// for ($z = $y; $z >= 0; $z--)
-				// {
-				// 	echo $x[$z];
-				// 	echo "<br>";
-				// }
-			?>
-
-
 </body>
 
 </html>

@@ -1,9 +1,3 @@
-<html>
-
-<head>
-</head>
-
-<body>
     <h3>String</h3>
     <?php
 		// Tipi i te dhenave String.
@@ -140,12 +134,7 @@
             
 			?>
     <?php  
-				// $conn= ftp_connect("192.168.100.1") or die("could not connect");  
-				// echo $conn;
+				$conn= ftp_connect("127.0.0.1") or die("could not connect");  
+				echo $conn;
             
 			?>
-
-
-</body>
-
-</html>
