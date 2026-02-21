@@ -3,10 +3,9 @@
 	session_start();
 ?>
 <html>
-
 <head>
+	<title>Session Example</title>
 </head>
-
 <body>
     <?php
 			$_SESSION['emri']='Arianit';
@@ -14,13 +13,13 @@
 			echo 'Session set';
 			echo '<br>';
 			print_r($_SESSION); //Na mundeson nxjerrjen e te gjitha sessioneve qe gjendent tek variabla globale $_SESSION.
-		?>
+	?>
     <?php 	
 			if (!isset($_SESSION['count'])) 
 			{
 				$_SESSION['count'] = 1;
 			} 
-			else 
+			else
 			{
 				$_SESSION['count']++;
 			} 

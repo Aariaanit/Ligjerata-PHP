@@ -56,6 +56,7 @@
 			echo $_SERVER['REQUEST_METHOD']; //Kthen metodën e kërkesës së përdorur për të hyrë në faqe(siç është POST)
 			
 		?>
+		
     <p>$_REQUEST</p>
 
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">

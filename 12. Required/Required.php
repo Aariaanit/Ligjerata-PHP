@@ -7,7 +7,6 @@
     }
     </style>
 </head>
-
 <body>
     <?php
 			$empUsername = "";	//Duhet te krijohen qe te mund te ju qasemi permes formes.
@@ -29,20 +28,12 @@
 			if(empty($email)){
 				$empEmail ="Email is required";
 			}
-			if(empty($username) and empty($password) and empty($email))
-			{
-				$empUsername ="Username is required";
-				$empPassword ="Password is required";
-				$empEmail ="Email is required";
-				// echo '<script>alert("Required!")</script>';
-			}
 			else if($username !="" and $password !="" and $email !="")
 			{
 				echo '<script>alert("Register Succesfully!")</script>';
 			}
 		}
-		
-		?>
+	?>
     <p><span class="empty">* Required</span></p>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
         Email: <input type="email" name="Email">

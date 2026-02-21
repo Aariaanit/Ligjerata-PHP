@@ -56,14 +56,12 @@
     <br>
     <?php
 			$a = 100; $b= 130;  $c =180;
-			
 			if($a > $b){
 				if($a > $c){
 					echo "A eshte me e madhe";
 				}
 				else{
 					echo "C eshte me e madhe";
-
 				}
 			}
 			else{
@@ -74,7 +72,6 @@
 					echo "C eshte me e madhe";
 				}
 			}
-			
 		?>
     <?php
 			//Shembulli 3
@@ -120,48 +117,48 @@
     <br>
     <?php 
             //Shembulli 5
-			$z = 2;
+			$z = 1;
 			
 			switch($z)
 			{
 				case 1:
 					echo 'Janar';
-				break;
+					break;
 				case 2:
 					echo 'Shkurt';
-				break;
+					break;
 				case 3:
 					echo 'Mars';
-				break;
+					break;
 				case 4:
 					echo 'Prill';
-				break;
+					break;
 				case 5:
 					echo 'Maj';
-				break;
+					break;
 				case 6:
 					echo 'Qershor';
-				break;
+					break;
 				case 7:
 					echo 'Korrik';
-				break;
+					break;
 				case 8:
 					echo 'Gushte';
-				break;
+					break;
 				case 9:
 					echo 'Shtator';
-				break;
+					break;
 				case 10:
 					echo 'Tetor';
-				break;
+					break;
 				
 				case 11:
 					echo 'Nentor';
-				break;
+					break;
 				
 				case 12:
 					echo 'Dhjetor';
-				break;
+					break;
 				
 				default:
 					echo 'Ky muaj nuk egziston!';

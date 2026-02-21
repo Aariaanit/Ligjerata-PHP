@@ -4,6 +4,17 @@
 </head>
 
 <body>
+	<?php
+		function x1($nr){
+			
+			$pro = 1;
+			for($i = 1; $i <= $nr; $i++){
+					$pro = $pro * $i;
+			}
+			return $pro;
+		}
+		echo x1(5);
+	?>
     <?php
 			//Krijmi i nje funksioni
 			function x() //

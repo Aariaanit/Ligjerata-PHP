@@ -14,7 +14,6 @@
 			if($number % 2 == 0)
 			{
 				echo '<script>alert("Numri eshte qift")</script>';
-				
 			}
 			else
 			{

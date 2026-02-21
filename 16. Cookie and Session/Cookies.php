@@ -6,7 +6,6 @@
 	// Ne kete menyre mund te e fshijme nje cookie.
 	//setcookie("user", "", time() - 10);
 
-
 	if(!isset($_COOKIE[$cookie_name]))
 	{
 		echo "Cookie '" . $cookie_name . "' is not set!";

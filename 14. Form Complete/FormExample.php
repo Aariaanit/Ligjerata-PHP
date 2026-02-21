@@ -65,7 +65,7 @@ function secure($data) {
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
   return $data;
-}
+} 
 ?>
 
     <h2>PHP Form Validation Example</h2>

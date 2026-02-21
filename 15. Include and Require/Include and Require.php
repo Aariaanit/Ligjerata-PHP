@@ -7,24 +7,30 @@
     }
     </style>
 </head>
-
+       
 <body>
-    <?php	
-			    //require ('form1.php');
-				include('form.php');
-				
-				//echo 'forma e pare';
-				include('navbar.php');
-		?>
+
+    <?php
+        //require 'form.php'; //Përdorimi i require për të përfshirë skedarin form.php
+        include 'form.php'; //Përdorimi i include për të përfshirë skedarin form.php
+    ?>
+    <?php include 'navbar.php'; ?>
+    
     <p><span class="empty">* Required</span></p>
-    <form method="post" action="">
+    <form method="post" >
         Username: <input type="text" name="Username">
         <span class="empty">*<?php echo $empUsername;?></span><br><br>
         Password: <input type="password" name="Password">
         <span class="empty">*<?php echo $empPassword;?></span><br><br>
-        <input type="submit" value="Log in">
+        Email: <input type="email" name="Email">
+        <span class="empty">*<?php echo $empEmail;?></span><br><br>
+        <input type="submit" value="Sign Up">
         <input type="reset" value="Cancel">
     </form>
+
+
+
 </body>
 
+</html>
 </html>

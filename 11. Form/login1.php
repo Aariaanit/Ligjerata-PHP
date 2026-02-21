@@ -1,19 +1,4 @@
-<html>
 
-<head>
-</head>
-
-<body>
-
-    <form method="post">
-        Username: <input type="text" name="Username"><br><br>
-        Password: <input type="password" name="Password"><br><br>
-        <input type="submit" value="Log in">
-        <input type="reset" value="Cancel">
-    </form>
-</body>
-
-</html>
 <?php
 	if($_SERVER['REQUEST_METHOD'] == 'POST')
 	{
@@ -25,8 +10,8 @@
 		}
 		else if($a === 'arianit' && $b === '044494134')
 		{
-			echo "<script>alert('Welcome!')</script>";
-			//echo "<script>window.open('admin.php','_self')</script>";
+			//echo "<script>alert('Welcome!')</script>";
+			echo "<script>window.open('admin.php','_self')</script>";
 		}
 		else
 		{
