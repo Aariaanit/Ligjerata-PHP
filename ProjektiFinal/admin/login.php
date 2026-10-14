@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once('connect.php');
+include_once('includes/connect.php');
 
 $errors = array();
 
@@ -33,7 +33,7 @@ if (isset($_POST['login'])) {
             array_push($errors, "Invalid username or password");
         }
     }
-}
+} 
 
 ?>
 <!DOCTYPE html>

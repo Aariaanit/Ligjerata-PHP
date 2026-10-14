@@ -13,7 +13,7 @@
         <input type="submit" name="upload" value="Insert">
         <input type="reset" name="cancel" value="Cancel">
     </form>
-    <a href='viewInsert.php'>Home</a>
+    <a href='viewInsert.php'>View Product</a>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <?php
 try {
   // Connect to the database
-  $pdo = new PDO("mysql:host=localhost;dbname=testdb", "root", "");
+  $pdo = new PDO("mysql:host=localhost;dbname=prizren", "root", "");
 
   //  Table alteration SQL
   $sql = "DROP TABLE users";

@@ -18,7 +18,7 @@
         
         <?php
             include_once('config.php');
-            $sql = "SELECT * FROM user";
+            $sql = "SELECT * FROM users";
             $getUsers = $conn->prepare($sql);
             $getUsers->execute();
             $users=$getUsers->fetchAll();

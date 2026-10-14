@@ -9,6 +9,7 @@ if (isset($_POST['login'])) {
 
     // Validation and Sanitization
     $username = htmlspecialchars($username);
+    $password = htmlspecialchars($password);
 
     if (empty($username) || empty($password)) {
         array_push($errors, "Both username and password are required for login");
