@@ -9,9 +9,9 @@
 </head>
 <body>
     <?php
-			$empUsername = "";	//Duhet te krijohen qe te mund te ju qasemi permes formes.
-			$empPassword = "";
-			$empEmail = "";
+		$empUsername = "";	//Duhet te krijohen qe te mund te ju qasemi permes formes.
+		$empPassword = "";
+		$empEmail = "";
 		if($_SERVER['REQUEST_METHOD'] == 'POST')
 		{
 			$username = $_POST['Username'];

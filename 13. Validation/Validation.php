@@ -41,7 +41,7 @@
 			{
 				$empUsername ="Username is required";
 				$empPassword ="Password is required";
-				$empEmail ="Email is\" required";
+				$empEmail ="Email is required";
 				// echo '<script>alert("Required!")</scrixpt>';
 			}
 			else if($username !="" and $password != "" and $email != "" and preg_match("/^[a-zA-ZëË ]*$/",$username) and filter_var($email, FILTER_VALIDATE_EMAIL))
